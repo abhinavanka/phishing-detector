@@ -3,8 +3,8 @@ import joblib
 import numpy as np
 
 # Load the trained model
-model = joblib.load("model.pkl")
-
+import os
+model = joblib.load(os.path.join(os.path.dirname(__file__), "model.pkl"))
 st.title("Phishing Website Detector")
 st.write("This app predicts whether a website is likely phishing or safe, based on 30 features extracted from its URL and structure.")
 
